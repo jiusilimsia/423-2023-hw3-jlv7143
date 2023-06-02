@@ -97,3 +97,13 @@ docker run -it  <image_name>
 If the AWS ECS task for this web app is still running, then you can access this webpage by logging into the Northwestern University VPN and clicking a link. However, since the task is stopped, the link no longer works.
 
 If you want to start the app, you have to log into my account and start it in ECS hw3-cloud-app Cluster hw3-cloud-app Service and update service with Desired tasks=1 and start a task (However, I'm not going to tell you my account and password). After the task start to run, you can click the link under DNS names in Networking section of ECS hw3-cloud-app Service in hw3-cloud-app Cluster.
+
+
+
+
+
+## Instructions on making predictions with the web app
+
+- On the left side of the webpage, you can use the sliders to set the parameters of cloud to make predictions. The explanation of the parameters are listed under the parameter name.
+- On the main page of the webpage, you can use the drop-down menu to select the version of the model you want to use to make the predictions.
+- You can find the prediction for the desired cloud class, along with its corresponding probability, under the "Prediction" section of the webpage.
