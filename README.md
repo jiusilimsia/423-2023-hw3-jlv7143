@@ -59,7 +59,7 @@ pytest
 To run the Streamlit application in a Docker container, you can use the following commands:
 
 ### Build the Docker image
-(image's platform (linux/amd64))
+(image is platform (linux/amd64))
 ```bash
 docker build -f dockerfiles/Dockerfile -t <image_name> .
 ```
