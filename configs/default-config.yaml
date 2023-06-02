@@ -1,0 +1,21 @@
+generate_features:
+  calculate_range:
+    IR_range:
+      min_col: IR_min
+      max_col: IR_max
+  calculate_norm_range:
+    IR_norm_range:
+      min_col: IR_min
+      max_col: IR_max
+      mean_col: IR_mean
+  log_transform:
+    log_entropy: visible_entropy
+  multiply:
+    entropy_x_contrast:
+      col_a: visible_contrast
+      col_b: visible_entropy
+  
+features:
+  - log_entropy
+  - IR_norm_range
+  - entropy_x_contrast

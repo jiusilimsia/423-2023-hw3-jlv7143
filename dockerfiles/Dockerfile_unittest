@@ -1,0 +1,26 @@
+# Use the official Python image as the base image and ensure that we target x86_64 architectures
+FROM --platform=linux/x86_64 python:3.10-slim
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Update pip to use the latest version
+RUN /usr/local/bin/python -m pip install --upgrade pip
+
+# Copy the requirements file to the working directory
+COPY requirements_unittest.txt .
+
+# Install the required dependencies
+RUN pip install -r requirements_unittest.txt
+
+# Copy the Streamlit application files to the working directory
+COPY app.py .
+COPY src src/
+COPY tests tests/
+COPY configs configs/
+COPY artifacts artifacts/
+COPY sunshine-and-blue-skies-ahead.webp sunshine-and-blue-skies-ahead.webp
+
+
+# Set the command to run the Streamlit application
+CMD ["pytest"]
